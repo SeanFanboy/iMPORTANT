@@ -11,6 +11,9 @@ def print_all():
     cursor.execute(query)
     answers = cursor.fetchall()
     for answer in answers:
-        print
+        print(f"{answer[0]:<3}{answer[1]:<55}{answer[2]:<8}{answer[3]}")
+    db.close
+
+print_all()
 
 
